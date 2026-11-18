@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data — Road Safety Dashboard</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">Road Safety Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="line.html">Trends</a></li>
+      <li><a href="bar.html">Age Groups</a></li>
+      <li><a href="scatter.html">Correlation</a></li>
+      <li><a href="data.html" class="active">Data</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="title">Data — Road Safety Dashboard</div>
+    <div class="subtitle">Original, processed data and notes</div>
+  </header>
+
+  <main class="container single">
+  <div class="content-box">
+
+    <!-- LEFT SIDE -->
+    <section class="card left">
+      <div class="card-title">Original datasets (download)</div>
+      <ul>
+        <li><a href="../Data/police_enforcement_2024_fines.csv" download>police_enforcement_2024_fines.csv</a></li>
+        <li><a href="../Data/police_enforcement_2024_alcohol_drug_tests.xlsx" download>police_enforcement_2024_alcohol_drug_tests.xlsx</a></li>
+        <li><a href="../Data/police_enforcement_2024_positive_drug_tests.xlsx" download>police_enforcement_2024_positive_drug_tests.xlsx</a></li>
+      </ul>
+
+      <div class="card-title" style="margin-top:1rem">Processing workflow (KNIME)</div>
+      <p>
+        The data processing workflow used to create <code>Final_Dataset.csv</code> was authored in KNIME.
+        You can download the workflow below and import it in KNIME Analytics Platform.
+      </p>
+
+      <p>
+        <a href="../Data/Group%20Project.knar" download style="font-weight:700;">Download KNIME workflow — Group Project.knar</a>
+      </p>
+
+      <div class="card-title" style="margin-top:1rem">Processed dataset (download)</div>
+      <p><a href="../Data/Final_Dataset.csv" download>Final_Dataset.csv</a></p>
+
+      <div class="card-title" style="margin-top:1rem">Download charts as images</div>
+      <div class="export-buttons">
+        <a href="../img/Choropleth.png" download="Choropleth.png" class="btn">Download Map Image</a> <br>
+        <a href="../img/Line.png" download="Line.png" class="btn">Download Trends Image</a> <br>
+        <a href="../img/Bar.png" download="Bar.png" class="btn">Download Age Groups Image</a> <br>
+        <a href="../img/Scatter.png" download="Scatter.png" class="btn">Download Correlation Image</a>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <article class="card story right">
+      <h2>Acknowledgements & Licence</h2>
+      <p>
+        We acknowledge the Australian Government for providing open data used in this project.
+        The visualisations and analysis in this dashboard were produced using data from the
+        Australian Road Safety Data Hub.
+      </p>
+
+      <h3>Data handling & processing</h3>
+      <p>
+        The original files were processed to create <code>Final_Dataset.csv</code>. The main steps include:
+      </p>
+
+      <ul>
+        <li>Standardising column names and formats</li>
+        <li>Filtering invalid entries</li>
+        <li>Aggregating by year, jurisdiction and age</li>
+        <li>Computing summary metrics for the dashboard</li>
+      </ul>
+
+      <h4>Final dataset columns</h4>
+      <ul>
+        <li><code>YEAR</code></li>
+        <li><code>JURISDICTION</code></li>
+        <li><code>AGE_GROUP</code></li>
+        <li><code>Speeding_Fines</code></li>
+        <li><code>Total_Tests</code></li>
+        <li><code>Cannabis_Positive</code>, <code>Cocaine_Positive</code>, <code>Meth_Positive</code></li>
+      </ul>
+    </article>
+
+  </div>
+  </main>
+
+  <footer>Group 44 — COS30045 Data Visualisation Project 2025</footer>
+</body>
+</html>

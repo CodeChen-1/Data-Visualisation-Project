@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Australia — Choropleth Map — Road Safety Dashboard</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="map-page">
+  <nav class="navbar">
+    <div class="nav-logo">Road Safety Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="map.html" class="active">Map</a></li>
+      <li><a href="line.html">Trends</a></li>
+      <li><a href="bar.html">Age Groups</a></li>
+      <li><a href="scatter.html">Correlation</a></li>
+      <li><a href="data.html">Data</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="title">Australia — Choropleth Map</div>
+    <div class="subtitle">Geographic distribution of Speeding Fines and Tests (2020–2024)</div>
+  </header>
+
+  <main class="container single">
+    <div class="content-box">
+      <section class="vis card left">
+        <div class="card-title">Australia — Choropleth</div>
+        <div id="map"></div>
+        <div id="mapLegend" class="legend"></div>
+      </section>
+
+      <article class="card story right">
+        <h2>Data Story: Regional Enforcement Insights</h2>
+        <div id="dataStoryContent"></div>
+      </article>
+    </div>
+  </main>
+
+  <footer>Group 44 — COS30045 Data Visualisation Project 2025</footer>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/map.js"></script>
+</body>
+</html>

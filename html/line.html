@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trends — Road Safety Dashboard</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">Road Safety Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="line.html" class="active">Trends</a></li>
+      <li><a href="bar.html">Age Groups</a></li>
+      <li><a href="scatter.html">Correlation</a></li>
+      <li><a href="data.html">Data</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="title">Trends Over Time — 2020 to 2024</div>
+    <div class="subtitle">Yearly trends of Speeding Fines, Total Tests, and Positive Detections</div>
+  </header>
+
+  <main class="container single">
+    <div class="content-stack">
+      <section class="vis card">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <div class="card-title">Trend Visualization</div>
+          <div class="controls" style="display:flex;gap:8px;align-items:center;">
+            <label for="jurisdictionSelect" style="font-size:13px;color:#516a7a;">Jurisdiction</label>
+            <select id="jurisdictionSelect"></select>
+          </div>
+        </div>
+        <div id="lineChart"></div>
+      </section>
+
+      <article class="card story">
+        <h2>Data Story: Testing and Enforcement Trends</h2>
+        <div id="dataStoryContent"></div>
+      </article>
+    </div>
+  </main>
+
+  <footer>Group 44 — COS30045 Data Visualisation Project 2025</footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/line.js"></script>
+  <div id="tooltip" class="tooltip" style="display:none;"></div>
+</body>
+</html>

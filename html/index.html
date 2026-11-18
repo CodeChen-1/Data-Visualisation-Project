@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Road Safety Enforcement Dashboard — Introduction</title>
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">Road Safety Dashboard</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Overview</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="line.html">Trends</a></li>
+      <li><a href="bar.html">Age Groups</a></li>
+      <li><a href="scatter.html">Correlation</a></li>
+      <li><a href="data.html">Data</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Road Safety Enforcement Dashboard</h1>
+    <p>Visualising patterns in speeding fines, roadside testing, and positive detections across Australia (2020–2024).</p>
+  </header>
+
+  <main class="intro-container">
+    <section class="intro-card">
+      <h2>About This Project</h2>
+      <p>
+        This dashboard explores national road safety enforcement data between 2020 and 2024, 
+        focusing on key aspects such as speeding fines, testing volume, and positive detections. 
+        Through interactive D3 visualisations, it aims to uncover patterns across states, age groups, and time.
+      </p>
+      <p>
+        Each page presents one aspect of the data, supported by a narrative that explains trends and potential factors influencing them.
+      </p>
+    </section>
+
+    <section class="intro-grid">
+      <a href="map.html" class="intro-link">
+        <div class="intro-card">
+          <h3>📍 Choropleth Map</h3>
+          <p>Explore geographic variations in speeding fines and enforcement intensity across Australian states.</p>
+        </div>
+      </a>
+
+      <a href="line.html" class="intro-link">
+        <div class="intro-card">
+          <h3>📊 Yearly Trends</h3>
+          <p>See how testing and fines evolved from 2020–2024, including impacts of policy and pandemic recovery.</p>
+        </div>
+      </a>
+
+      <a href="bar.html" class="intro-link">
+        <div class="intro-card">
+          <h3>👥 Age Group Breakdown</h3>
+          <p>Compare enforcement and violations across different age categories to identify key risk groups.</p>
+        </div>
+      </a>
+
+      <a href="scatter.html" class="intro-link">
+        <div class="intro-card">
+          <h3>⚫ Correlation Analysis</h3>
+          <p>Analyse the relationship between total tests and fines, with bubble size showing positive detections.</p>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Group 44 — COS30045 Data Visualisation Project 2025
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="../js/main.js"></script>
+    <div id="tooltip" class="tooltip" style="display:none;"></div>
+  </footer>
+</body>
+</html>
